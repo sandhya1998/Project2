@@ -14,7 +14,20 @@ struct Student{
 
 int val;
 
+void *run(){
 
+	pthread_mutex_lock(&l);
+
+	for(i=0;i<3;i++){
+        	if((s[i].value+val)==6){
+                        printf("\n%d is writing.",s[i].name);
+                        printf("\n%d has finished writing.",s[i].name);
+                 }
+        }
+
+	pthread_mutex_unlock(&l);
+
+}
 
 void *resource(){
 

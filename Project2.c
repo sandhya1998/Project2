@@ -29,22 +29,7 @@ void *run(){
 
 }
 
-void *resource(){
 
-	pthread_mutex_lock(&l);
-	int i;
-	i=rand()%3;
-	if(i==0){
-		val=pen+paper;
-	}
-	else if(i==1){
-		val=pen+question_paper;
-	}
-	else{
-		val=paper+question_paper;
-	}
-	pthread_mutex_unlock(&l);
-}
 
 
 int main(){
